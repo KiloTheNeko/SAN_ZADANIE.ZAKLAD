@@ -7,8 +7,14 @@ public static class WorkerMethods
         
     }
     
-    public static int SalaryByPosition(this IEnumerable<Worker> workers, Position position)
+    public static decimal SalaryByPosition(this IEnumerable<Worker> workers, Position position)
     {
-        return 0;
+        decimal totalSalaryByPosition = 0.0m;
+        foreach (var worker in workers)
+        {
+            if (worker.Position.Equals(position)) 
+                totalSalaryByPosition += worker.Salary;
+        }
+        return totalSalaryByPosition;
     }
 }
