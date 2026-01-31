@@ -8,12 +8,12 @@ public enum Position
     Janitor
 }
 
-public sealed class Worker(int id, string firstName, string lastName, int salary, Position position)
+public sealed class Worker(int id, string firstName, string lastName, decimal salary, Position position)
 {
     public int Id { get; } = id;
     public string FirstName { get; } = firstName;
     public string LastName { get; } = lastName;
-    public int Salary { get; } = salary;
+    public decimal Salary { get; } = salary;
     public Position Position { get; } = position;
 }
 
